@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     background-color: rgb(252, 247, 209);
@@ -9,7 +8,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-  
+
 }
 
 div {
@@ -23,11 +22,14 @@ div {
     overflow-x: hidden;
 }
 
-.navi{
+.navi {
 
-    background-color: rgba(255, 255, 255, 0.045); /* translucent */
-    backdrop-filter: blur(200px); /* blurs the background behind */
-    -webkit-backdrop-filter: blur(200px); /* for Safari */
+    background-color: rgba(255, 255, 255, 0.045);
+    /* translucent */
+    backdrop-filter: blur(200px);
+    /* blurs the background behind */
+    -webkit-backdrop-filter: blur(200px);
+    /* for Safari */
     color: antiquewhite;
 
 }
@@ -36,7 +38,7 @@ div {
     background: linear-gradient(to bottom, #e95959, #b01111, #910b0b, #250404);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; 
+    background-clip: text;
     color: transparent;
     font-size: 80px;
 }
@@ -46,34 +48,39 @@ div {
 
 
 
-.foot{
+.foot {
     background-color: #ffffff00;
 }
 
-.pics{
+.pics {
     height: 400px;
     width: 300px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.line{
-     color: #910b0b;
-}
-
-.line:hover{
-     color: #250404;
-}
-
-.btn{
+.line {
     color: #910b0b;
-    border-color: #250404;
 }
-.btn:hover{
+
+.line:hover {
+    color: #250404;
+}
+
+.btn {
+    color: #02010c;
+    background: linear-gradient(to bottom, #e95959, #b01111, #910b0b, #250404);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    border-color: #250404;
+
+}
+
+.btn:hover {
     background-color: #ffffff0a;
     color: #910b0b;
     border-color: #250404;
-   
+
 
 }
 
@@ -83,13 +90,12 @@ div {
 
 /* Main Page*/
 
-.homepage{
+.homepage {
     background-image: url(pics/cov.jpg);
     width: 1800px;
     height: 600px;
     background-size: cover;
     background-attachment: fixed;
     margin-top: -100px;
-    
-}
 
+}
