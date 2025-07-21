@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Edu+SA+Hand:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body {
     margin: 0;
     background-color: rgb(252, 247, 209);
@@ -16,7 +18,7 @@ div {
 }
 
 .main {
-    background-color: #02010c;
+    background-color: #08010a;
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
@@ -25,11 +27,11 @@ div {
 .navi {
 
     background-color: rgba(255, 255, 255, 0.045);
-    /* translucent */
+
     backdrop-filter: blur(200px);
-    /* blurs the background behind */
+
     -webkit-backdrop-filter: blur(200px);
-    /* for Safari */
+
     color: antiquewhite;
 
 }
@@ -68,11 +70,10 @@ div {
 }
 
 .btn {
-    color: #02010c;
-    background: linear-gradient(to bottom, #e95959, #b01111, #910b0b, #250404);
-    border-style: solid;
-    border-width: 1px 2px 2px 1px;
+    color: #6d0707;
     border-color: #250404;
+    font-family: Inter;
+    font-weight: 600;
 
 }
 
@@ -99,3 +100,4 @@ div {
     margin-top: -100px;
 
 }
+
