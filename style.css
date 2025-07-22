@@ -6,6 +6,9 @@ body {
     transition: all 0.5s ease-in-out;
     animation: BODY_LOAD 1s ease-in-out forwards;
     color: antiquewhite;
+    font-family: Inter;
+    font-size: small;
+
 }
 
 html {
@@ -27,31 +30,35 @@ div {
 .navi {
 
     background-color: rgba(255, 255, 255, 0.045);
-
+    font-family: Inter;
+    font-weight: 600;
     backdrop-filter: blur(200px);
-
     -webkit-backdrop-filter: blur(200px);
-
     color: antiquewhite;
 
 }
 
 .header {
-    background: linear-gradient(to bottom, #e95959, #b01111, #910b0b, #250404);
+    background: linear-gradient(to right, #900606, #690c0c, #250404, #0e0101);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     font-size: 80px;
+    transition: text-shadow 0.3s ease;
+}
+
+.header:hover {
+    text-shadow: 
+        0 0 2px #900606,
+        0 0 6px #690c0c,
+        0 0 7px #250404,
+        0 0 7px #0e0101;
 }
 
 
-
-
-
-
 .foot {
-    background-color: #ffffff00;
+    background-color: #070108;
 }
 
 .pics {
@@ -85,19 +92,32 @@ div {
 
 }
 
-
-
-
-
 /* Main Page*/
 
 .homepage {
-    background-image: url(pics/cov.jpg);
-    width: 1800px;
-    height: 600px;
     background-size: cover;
     background-attachment: fixed;
     margin-top: -100px;
 
 }
 
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    margin-top: -100px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: -30px;
+    width: 650px;
+    height: 500px;
+    text-align: left;
+}
