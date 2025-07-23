@@ -7,7 +7,7 @@ body {
     animation: BODY_LOAD 1s ease-in-out forwards;
     color: antiquewhite;
     font-family: Inter;
-    font-size: small;
+    font-size: 15px;
 
 }
 
@@ -78,7 +78,8 @@ div {
 
 .btn {
     color: #6d0707;
-    border-color: #250404;
+    border-color: #4a0606;
+    border-width: 2px;
     font-family: Inter;
     font-weight: 600;
 
@@ -112,12 +113,19 @@ div {
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
+    
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-left: -30px;
     width: 650px;
     height: 500px;
     text-align: left;
 }
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-size: 75px;
+}
+
