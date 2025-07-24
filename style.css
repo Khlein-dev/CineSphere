@@ -78,7 +78,7 @@ div {
 
 .btn {
     color: #6d0707;
-    border-color: #4a0606;
+    border-image: linear-gradient(to right, #900606, #690c0c, #250404) 1;
     border-width: 2px;
     font-family: Inter;
     font-weight: 600;
@@ -116,7 +116,7 @@ div {
     
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     margin-left: -30px;
     width: 650px;
     height: 500px;
@@ -129,3 +129,68 @@ h1 {
     font-size: 75px;
 }
 
+h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+}
+
+.butt {
+    width: 200px;
+    font-family: Inter;
+    font-weight: 600;
+    color: antiquewhite;
+    background: linear-gradient(to right, #900606, #690c0c, #250404);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(144, 6, 6, 0.5);
+}
+
+.butt:hover {
+    /* Brighter glow on hover */
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.8);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: antiquewhite;
+    transition: color 0.3s ease;
+}
+
+.cover {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+
+
+    
+
+.col {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    padding: 20px; 
+    margin: 4px;
+}
