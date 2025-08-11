@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Edu+SA+Hand:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+html{
+    animation: BODY_LOAD 1s ease-in-out forwards;
+}
+
 body {
     margin: 0;
     background-color: rgb(252, 247, 209);
@@ -8,6 +12,7 @@ body {
     color: antiquewhite;
     font-family: Inter;
     font-size: 15px;
+    
 
 }
 
@@ -219,5 +224,40 @@ a {
         0 0 2px #900606,
         0 0 6px #690c0c,
         0 0 7px #250404,
-        0 0 7px #0e0101; ;
+        0 0 7px #0e0101;
+    ;
+}
+
+
+
+@media (min-width: 1440px) {
+    .center {
+        transform: translateX(7%);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .center {
+        transform: translateX(3%);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .center {
+        transform: translateX(20%); 
+    }
+
+    .carousel {
+        transform: translateY(40%);
+    }
+}
+
+@keyframes BODY_LOAD {
+    0% {
+        background-color: rgb(23, 2, 2);
+    }
+    100% {
+        background-color: #08010a;
+    }
 }
