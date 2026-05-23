@@ -41,16 +41,86 @@ const slides = [
 ];
 
 const movies = [
-  { title: "The Dark Knight",        rating: "9.0", year: "2008", genre: "Crime",      img: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" },
-  { title: "Avengers: Infinity War", rating: "8.4", year: "2018", genre: "Action",     img: "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" },
-  { title: "Rio",                    rating: "7.3", year: "2011", genre: "Animation",  img: "https://image.tmdb.org/t/p/w500/5zqSpBtfsXmO9jcKxR5y0b9Pn6.jpg" },
-  { title: "Jurassic World",         rating: "7.0", year: "2015", genre: "Adventure",  img: "https://image.tmdb.org/t/p/w500/jjBgi2r5cRt36xF6iNUEhzscEcb.jpg" },
-  { title: "Cars",                   rating: "7.1", year: "2006", genre: "Animation",  img: "https://image.tmdb.org/t/p/w500/abW5AzHDaIK1n9C36VdAeOwORRA.jpg" },
-  { title: "The Amazing Spider-Man", rating: "6.9", year: "2012", genre: "Action",     img: "https://image.tmdb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg" },
-  { title: "WALL·E",                 rating: "8.4", year: "2008", genre: "Sci-Fi",     img: "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg" },
-  { title: "The Incredibles",        rating: "8.0", year: "2004", genre: "Animation",  img: "https://image.tmdb.org/t/p/w500/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg" },
-];
+  { 
+    title: "The Dark Knight",
+    rating: "9.0",
+    year: "2008",
+    genre: "Crime",
+    img: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+  },
+  { 
+    title: "Avengers: Infinity War",
+    rating: "8.4",
+    year: "2018",
+    genre: "Action",
+    img: "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+  },
 
+  /* UPDATED RIO */
+  { 
+    title: "Rio",
+    rating: "7.3",
+    year: "2011",
+    genre: "Animation",
+    img: "https://image.tmdb.org/t/p/original/oo7M3b7Y6wK8Q2Q9h0J2l1m9QxR.jpg"
+  },
+
+  { 
+    title: "Jurassic World",
+    rating: "7.0",
+    year: "2015",
+    genre: "Adventure",
+    img: "https://image.tmdb.org/t/p/original/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg"
+  },
+
+  { 
+    title: "Interstellar",
+    rating: "8.6",
+    year: "2014",
+    genre: "Sci-Fi",
+    img: "https://image.tmdb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg"
+  },
+
+  /* UPDATED TOY STORY 3 */
+  { 
+    title: "Toy Story 3",
+    rating: "8.3",
+    year: "2010",
+    genre: "Animation",
+    img: "https://image.tmdb.org/t/p/original/4uJZf0Y1z8kQ3q1s6Q9yQ9x7k2A.jpg"
+  },
+
+  /* NEW MOVIE ADDED */
+  { 
+    title: "Inception",
+    rating: "8.8",
+    year: "2010",
+    genre: "Sci-Fi",
+    img: "https://image.tmdb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
+  },
+
+  { 
+    title: "The Amazing Spider-Man",
+    rating: "6.9",
+    year: "2012",
+    genre: "Action",
+    img: "https://image.tmdb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg"
+  },
+  { 
+    title: "WALL·E",
+    rating: "8.4",
+    year: "2008",
+    genre: "Sci-Fi",
+    img: "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg"
+  },
+  { 
+    title: "The Incredibles",
+    rating: "8.0",
+    year: "2004",
+    genre: "Animation",
+    img: "https://image.tmdb.org/t/p/w500/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg"
+  },
+];
 /* ─── GLOBAL STYLES ─────────────────────────────────────────── */
 const GlobalStyles = () => (
   <style>{`
