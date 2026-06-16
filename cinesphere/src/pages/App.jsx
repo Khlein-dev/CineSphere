@@ -785,21 +785,52 @@ function Navbar() {
 
       {/* Links */}
       <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
-        {["Home", "Discover", "Tickets", "My List"].map(label => (
-          <button key={label} onClick={() => setActive(label)} style={{
-            position: "relative", background: "transparent", border: "none",
-            color: active === label ? "#fff" : "rgba(255,255,255,0.38)",
-            padding: "8px 14px", fontSize: 13,
-            fontFamily: T.font, fontWeight: active === label ? 700 : 500,
-            letterSpacing: "0.1em", cursor: "pointer", textTransform: "uppercase",
-            transition: "color 0.2s",
-          }}>
-            {label}
-            {active === label && (
-              <div style={{ position: "absolute", bottom: 2, left: 14, right: 14, height: 1, background: "var(--accent)", boxShadow: "0 0 7px var(--accent)" }} />
-            )}
-          </button>
-        ))}
+        {["Home", "Discover", "Tickets", "My List"].map(label => {
+          const path =
+            label === "Discover" ? "./pages/Discover" :
+            label === "Tickets" ? "./pages/Tickets" :
+            label === "My List" ? "./pages/MyList" :
+            "./pages/App";
+
+
+          return (
+            <a
+              key={label}
+              href={path}
+              onClick={() => setActive(label)}
+              style={{
+                position: "relative",
+                background: "transparent",
+                border: "none",
+                color: active === label ? "#fff" : "rgba(255,255,255,0.38)",
+                padding: "8px 14px",
+                fontSize: 13,
+                fontFamily: T.font,
+                fontWeight: active === label ? 700 : 500,
+                letterSpacing: "0.1em",
+                cursor: "pointer",
+                textTransform: "uppercase",
+                transition: "color 0.2s",
+                textDecoration: "none",
+              }}
+            >
+              {label}
+              {active === label && (
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 2,
+                    left: 14,
+                    right: 14,
+                    height: 1,
+                    background: "var(--accent)",
+                    boxShadow: "0 0 7px var(--accent)",
+                  }}
+                />
+              )}
+            </a>
+          );
+        })}
       </div>
 
       {/* Right actions */}
@@ -900,7 +931,7 @@ function Footer() {
             <div style={{ width: 28, height: 28, background: "var(--accent)", clipPath: "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M4 3.5A1.5 1.5 0 015.5 2h7.379a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0118.5 7.622V20.5A1.5 1.5 0 0117 22H5.5A1.5 1.5 0 014 20.5v-17z"/></svg>
             </div>
-            <span style={{ fontFamily: T.font, fontWeight: 800, fontSize: 15, letterSpacing: "0.28em", color: "#fff", textTransform: "uppercase" }}>CineSphere</span>
+            <span style={{ fontFamily: T.font, fontWeight: 800, fontSize: 15, letterSpacing: "0.28em", color: "#fff", textTransform: "uppercase" }}>CineSphere Beta</span>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.85, color: "rgba(232,224,216,0.32)", fontStyle: "italic", fontWeight: 300 }}>
             A curated film universe dedicated to the art, culture, and immersive experience of cinema — past, present, and future.
