@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import SignIn from "./signIn";
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────────── */
 const T = {
@@ -1059,7 +1060,7 @@ function StarIcon({ size = 12 }) {
 }
 
 /* ─── NAVBAR ─────────────────────────────────────────────────── */
-function Navbar({ query, onQueryChange, onNavigate }) {
+function Navbar({ query, onQueryChange, onNavigate, onSignIn }) {
   const [scrolled, setScrolled] = useState(false);
   const [active,   setActive]   = useState("Home");
   const [search,   setSearch]   = useState(false);
@@ -1159,6 +1160,7 @@ function Navbar({ query, onQueryChange, onNavigate }) {
         </div>
 
         <button
+          onClick={onSignIn}
           style={{
             background: "var(--accent)", border: "none", color: "#fff",
             padding: "8px 18px", fontSize: 12,
@@ -1412,6 +1414,7 @@ function Footer({ onSubscribe }) {
 
 /* ─── ROOT ───────────────────────────────────────────────────── */
 export default function CineSphere() {
+  const [page, setPage] = useState("home"); // "home" | "signin"
   const [activeGenre, setActiveGenre] = useState("All");
   const [query, setQuery] = useState("");
   const [myList, setMyList] = useState([]);
@@ -1469,11 +1472,15 @@ export default function CineSphere() {
     m.title.toLowerCase().includes(query.toLowerCase())
   );
 
+  if (page === "signin") {
+    return <SignIn onBack={() => setPage("home")} />;
+  }
+
   return (
     <>
       <GlobalStyles />
       <div style={{ background: T.bg, minHeight: "100vh" }}>
-        <Navbar query={query} onQueryChange={setQuery} onNavigate={handleNavigate} />
+        <Navbar query={query} onQueryChange={setQuery} onNavigate={handleNavigate} onSignIn={() => setPage("signin")} />
 
         <div id="home">
           <Carousel
