@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /* ─── DESIGN TOKENS (shared with CineSphere) ──────────────────── */
 const T = {
@@ -270,7 +270,7 @@ function FormField({ label, id, type = "text", value, onChange, placeholder, aut
 }
 
 /* ─── ROOT: SIGN IN PAGE ─────────────────────────────────────── */
-export default function SignIn() {
+export default function SignIn({ onBack }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPw, setShowPw] = useState(false);
@@ -306,6 +306,13 @@ export default function SignIn() {
 
     const accentRgb = hexToRgb(T.accent);
 
+    useEffect(() => {
+        if (status === "success" && onBack) {
+            const t = setTimeout(() => onBack(), 1700);
+            return () => clearTimeout(t);
+        }
+    }, [status, onBack]);
+
     return (
         <>
             <GlobalStyles />
@@ -321,7 +328,7 @@ export default function SignIn() {
                             <BrandMark />
                         </div>
 
-                        <a href="/" style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 12.5, color: "rgba(255,255,255,0.4)", textDecoration: "none", marginBottom: 30, letterSpacing: "0.04em" }}
+                        <a href="/" onClick={onBack ? (e) => { e.preventDefault(); onBack(); } : undefined} style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 12.5, color: "rgba(255,255,255,0.4)", textDecoration: "none", marginBottom: 30, letterSpacing: "0.04em" }}
                             onMouseOver={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}
                             onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.4)"}
                         >
