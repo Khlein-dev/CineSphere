@@ -92,7 +92,7 @@ npm run preview  # preview the production build locally
 
 <tr>
 <td align="center">
-<img src="./signin.png" alt="Sign In Page" width="100%">
+<img src="./signIn.png" alt="Sign In Page" width="100%">
 <br>
 <b>Authentication</b>
 </td>
