@@ -71,6 +71,36 @@ npm run preview  # preview the production build locally
 
 ---
 
+## Preview
+
+<table align="center">
+<tr>
+<td align="center">
+<img src="./landpage.png" alt="Landing Page" width="100%">
+<br>
+<b>Landing Page</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="./movies.png" alt="Movies Page" width="100%">
+<br>
+<b>Movie Discovery</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="./signin.png" alt="Sign In Page" width="100%">
+<br>
+<b>Authentication</b>
+</td>
+</tr>
+</table>
+
+
+
 ## Features
 
 ```
